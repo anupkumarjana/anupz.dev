@@ -4,7 +4,7 @@ import { LuMail } from "react-icons/lu";
 
 export default function Contact() {
   return (
-    <div className="text-[#2d2e32] w-full pb-16 px-8 py-16 md:px-60 md:py-32  gap-20 font-poppins">
+    <div className="text-[#2d2e32] w-full pb-16 px-8 py-16 md:px-60 md:py-32  gap-20 font-poppins" id="contact">
       <div className="md:flex flex-col md:items-start md:justify-start flex justify-center items-center">
         <h2 className="uppercase text-xl font-extrabold text-yellow-500 pb-4">
           Contact

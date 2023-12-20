@@ -12,42 +12,60 @@ export default function Header() {
   function toggleMenu() {
     setIsMenuOpen(!isMenuOpen);
   }
+  function handleLinkClick() {
+    if (isMenuOpen) {
+      toggleMenu(); // Close the menu when a link is clicked on smaller screens
+    }
+  }
 
   let Links = [
     {
       name: "Home",
-      link: "/",
+      link: "#home",
       icon: <BiHomeAlt2 />,
     },
     {
       name: "About",
-      link: "/about",
+      link: "#about",
       icon: <GoPerson />,
     },
     {
       name: "Projects",
-      link: "/projects",
+      link: "#projects",
       icon: <CgWebsite />,
     },
     {
       name: "Contact",
-      link: "/contact",
+      link: "#contact",
       icon: <GrContactInfo />,
     },
   ];
 
   return (
-    <header className="text-[#2d2e32] w-full border-b-2 font-poppins">
-      <nav className="flex justify-between items-center px-6 md:px-24 py-5">
+    <header
+      className="text-[#2d2e32] w-full border-b-2 font-poppins fixed bg-white z-[100]"
+      id="#"
+    >
+      <nav className="flex justify-between items-center px-6 md:px-24 py-5 scroll-smooth">
         <a href="/">
-          <h3 className="text-2xl font-semibold">
+          <h3 className="text-3xl font-semibold">
             anupz<span className="text-yellow-500">.dev</span>
           </h3>
         </a>
-        <ul className="hidden md:flex gap-8 font-semibold">
+        <ul className="hidden md:flex gap-8 font-semibold ">
           {Links.map((link) => (
             <li key={link.name}>
-              <a href={link.link} className="hover:text-yellow-500 flex items-center gap-2">
+              <a
+                href={link.link}
+                className="hover:text-yellow-500 flex items-center gap-2"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleLinkClick();
+                  document.querySelector(link.link).scrollIntoView({
+                    behavior: "smooth",
+                  });
+                }}
+              >
                 {link.icon}
                 {link.name}
               </a>
@@ -74,17 +92,24 @@ export default function Header() {
         {(ref) => (
           <div
             ref={ref}
-            className="w-full fixed top-[72px] right-0 p-14 rounded-b-lg bg-yellow-500 shadow-md md:hidden text-center"
+            className="w-full fixed top-[72px] right-0 p-14 rounded-b-lg bg-white shadow-md md:hidden text-center"
           >
             <ul className="flex flex-col gap-4">
               {Links.map((link) => (
                 <li
                   key={link.name}
-                  className="p-2 rounded-lg bg-black w-full transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-200"
+                  className="p-2 rounded-lg shadow-sm w-full transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-200"
                 >
                   <a
                     href={link.link}
-                    className="hover:text-yellow-100 block py-2 flex justify-center items-center gap-2"
+                    className="hover:text-yellow-500 py-2 flex justify-center items-center gap-2"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleLinkClick();
+                      document.querySelector(link.link).scrollIntoView({
+                        behavior: "smooth",
+                      });
+                    }}
                   >
                     {link.icon}
                     {link.name}

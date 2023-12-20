@@ -1,5 +1,4 @@
 import React from "react";
-// import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -10,13 +9,13 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div>
+    <div className="scroll-smooth">
       <Header />
       <Home />
       <About />
       <Portfolio />
       <Contact />
-      <Footer/>
+      <Footer />
     </div>
   );
 }

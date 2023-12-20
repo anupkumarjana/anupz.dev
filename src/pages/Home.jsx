@@ -5,14 +5,14 @@ import { CiLinkedin } from "react-icons/ci";
 
 export default function Home() {
   return (
-    <div className="bg-[#f9f9f9] text-[#2d2e32] w-full pb-16 md:px-60 ">
-      <div className=" flex flex-col-reverse md:flex md:flex-row justify-center items-center gap-20 py-16 md:px-0 px-8">
-        <div className=" flex flex-col leading-light gap-8">
-          <h1 className="text-[2.5rem] font-poppins md:text-[3.5rem] font-extrabold leading-[40px]  md:leading-[70px]">
-            Front-End React Developer{" "}
-            <span className="text-[30px] md:text-[40px]">👋🏼</span>
+    <div className="bg-[#f9f9f9] text-[#2d2e32] w-full pb-16 md:px-60 pt-16 md:pt-20" id="home">
+      <div className=" flex flex-col-reverse md:flex md:flex-row justify-center items-center gap-10 md:gap-20 py-16 md:px-0 px-8">
+        <div className=" md:flex md:flex-col flex flex-col justify-center text-center md:text-start items-center md:justify-start md:items-start leading-light gap-8">
+          <h1 className="text-[3.5rem] font-poppins md:text-[3.5rem] font-extrabold leading-[60px]  md:leading-[70px]">
+            Front-End React Developer
+            <span className="text-[40px]">👋🏼</span>
           </h1>
-          <p className="leading-normal flex-wrap text-lg text-[#555]">
+          <p className="leading-normal font-Mulish flex-wrap text-lg text-[#555]">
             Hi, I'm Anup K Jana. A passionate Front-end React Developer based in
             Bangalore, India. 📍
           </p>
@@ -33,7 +33,7 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <div className="w-72 md:w-[55%] rounded-lg animation">
+        <div className="w-80 md:w-[55%] rounded-lg animation"> 
           <img src={image} alt="" />
         </div>
       </div>

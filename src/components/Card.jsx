@@ -1,23 +1,24 @@
 import React from "react";
 import { FiGithub } from "react-icons/fi";
 import { IoMdOpen } from "react-icons/io";
+import "../imageCroll.css"
 
 export default function Card(props) {
   return (
     <div className="flex flex-col md:flex-row gap-10 md:gap-20 my-10 bg-white p-6 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
-      <div>
+      <div className="screen">
         <img
-          className="h-full w-full object-cover rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:-translate-y-2 ease-in-out duration-200"
+          className="w-full"
           src={props.src}
           alt=""
         />
       </div>
-      <div className=" md:w-[90%] flex flex-col justify-center items-center">
+      <div className=" md:w-[40%] flex flex-col justify-center items-center">
         <div className="flex flex-col justify-center items-center">
           <h3 className="text-[#2d2e32] text-lg my-6 font-bold uppercase">
             {props.title} <span className="text-sm">{props.span}</span>
           </h3>
-          <p className=" mx-6 text-lg text-[#767676] font-normal text-center">
+          <p className=" mx-2 mb-2 text-lg text-[#767676] font-normal text-center">
             {props.content}
           </p>
         </div>
