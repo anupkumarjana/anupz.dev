@@ -9,13 +9,14 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="scroll-smooth">
+    <div>
       <Header />
       <Home />
       <About />
       <Portfolio />
       <Contact />
       <Footer />
+     
     </div>
   );
 }

@@ -22,8 +22,8 @@ export default function Portfolio() {
             title="Dietitian Website"
             span="(November 2023) 🥗"
             content="A dietitian's site facilitates appointments and dietary services, offering a user-friendly interface for scheduling personalized consultations to meet individual health needs."
-            tech="React"
-            css="Tailwind"
+            tech="Bootstrap"
+            css="CSS"
           />
           {/* <ReversedCard
             src={image1}
