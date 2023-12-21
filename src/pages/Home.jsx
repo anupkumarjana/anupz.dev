@@ -36,7 +36,7 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <div className="w-80 md:w-[55%] rounded-lg animation">
+        <div className="w-72 md:w-[45%] rounded-lg animation">
           <img src={image} alt="" />
         </div>
       </div>
@@ -63,7 +63,10 @@ export default function Home() {
             <img src="https://skillicons.dev/icons?i=mysql" alt="mysql" />
           </div>
           <div className="flex  gap-2 cursor-pointer hover:-translate-y-4 ransition-all ease-in-out duration-300">
-            <img src="https://skillicons.dev/icons?i=bootstrap" alt="bootstrap" />
+            <img
+              src="https://skillicons.dev/icons?i=bootstrap"
+              alt="bootstrap"
+            />
             <img src="https://skillicons.dev/icons?i=tailwind" alt="tailwind" />
           </div>
         </div>
