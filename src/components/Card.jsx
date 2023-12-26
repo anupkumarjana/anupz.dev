@@ -33,7 +33,7 @@ export default function Card(props) {
         </div>
         <div className="flex gap-20 text-lg font-semibold mt-8">
           <a
-            href="https://github.com/anupkumarjana"
+            href={props.github}
             target="blank"
             className="flex gap-4 ietms-center cursor-pointer hover:text-yellow-500"
           >
@@ -43,7 +43,7 @@ export default function Card(props) {
             </button>
           </a>
           <a
-            href="https://dietgo.in"
+            href={props.link}
             target="blank"
             className="flex gap-4 ietms-center cursor-pointer hover:text-yellow-500"
           >
